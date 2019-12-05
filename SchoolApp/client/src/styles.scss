@@ -1,0 +1,65 @@
+@import "~materialize-css/dist/css/materialize.min.css";
+
+html{
+  font-size: 14px;
+}
+
+//----------Auth layout----------
+ .auth-block .card{
+   margin: 50px auto;
+   max-width: 420px;
+ }
+//-------------------------------
+.page-title{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding:15px 0
+}
+.sub-page-title{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  flex-wrap: wrap;
+  p{
+    font-size: 1.2rem;
+    padding: 0 15px;
+  }
+}
+.page-title button{
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+ul.breadcrumbs{
+  li{
+    display: inline;
+    &+li:before {
+      padding: 6px;
+      color: rgb(77, 76, 76);
+      content: '\2192';
+    }
+  }
+}
+
+.card{
+  .btn-delete{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+.noData{
+  line-height: 50px;
+  font-size: 1.4rem;
+  color: #f44336;
+  text-align: center;
+  & span{
+    color: grey;
+  }
+  border: 1px solid#ffcdd2;
+  border-radius: 5px;
+  background: #ffebee;
+}

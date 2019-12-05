@@ -1,0 +1,32 @@
+<div class="page-title">
+    <h4>Список груп</h4>
+    <button 
+     class="waves-effect waves-light btn grey darken-1"
+     [routerLink]="['new']"
+     >Додати групу</button>
+  </div>
+
+  <div class="row" *ngIf="isLoaded; else loader">  
+    <div *ngIf="viewData.length > 0 && hasGroups; else listEmpty">
+      <div class="course" *ngFor="let course of viewData">
+        <div class="course-content" *ngIf="course.groups.length > 0">
+          <h5 class="center">{{course.title}}</h5>
+          <div class="collection">
+              <a 
+                *ngFor="let g of course.groups"
+                class="collection-item"
+                [routerLink]="g._id">{{g.title}}</a>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <ng-template #listEmpty>
+      <p class="center">Групи відсутні.</p>
+    </ng-template>
+  </div>
+  
+  <ng-template #loader>
+      <app-loader size="big"></app-loader>
+  </ng-template>
+  
+  

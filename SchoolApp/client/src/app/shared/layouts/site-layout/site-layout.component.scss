@@ -1,0 +1,43 @@
+.sidenav{
+  .side-header{
+    height: 64px;
+    background: #757575;
+    h5, p{
+      padding: 5px 0;
+      margin: 0;
+      text-align: center;
+      color: white;
+    }
+  }
+  
+
+}
+
+.a-sidenav{
+  transform:translateX(0)!important;
+  width:250px!important
+}
+
+main,footer{
+  margin-left:250px;
+  width: calc(100% - 250px);
+  height: 100vh;
+}
+ @media(max-width:992px){
+  main,footer{
+    width: 100%;
+    margin: 0;;
+  }
+ }
+
+ .nav-wrapper{ padding: 0 20px; }
+
+ .content{ padding: 0 10px;}
+
+.cab{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.prof-name{
+  float: right;
+}
